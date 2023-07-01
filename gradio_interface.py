@@ -20,7 +20,7 @@ with gr.Blocks() as demo:
         # Create a dropdown input component with the folder list
         folder_dropdown = gr.inputs.Dropdown(choices=folder_list, label="Select Instagram")
         # Add the "Resize and Crop" button component
-        resize_and_crop_btn = gr.Button("Resize and Crop from fodler")
+        resize_and_crop_btn = gr.Button("Resize and Crop from folder")
         # Bind cropping function to the button
         resize_and_crop_btn.click(fn=tools_for_gradio.process_images, inputs=folder_dropdown, outputs=None)
     
